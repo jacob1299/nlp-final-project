@@ -3,3 +3,4 @@ output/
 __pycache__/
 eval_output/
 trained_model/
+.DS_Store
