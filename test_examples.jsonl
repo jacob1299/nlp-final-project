@@ -1,0 +1,180 @@
+{ "premise": "The man is playing a guitar", "hypothesis": "The man is playing a musical instrument", "label": 0 }
+{ "premise": "The man is playing a guitar", "hypothesis": "The man is wearing a red shirt", "label": 1 }
+{ "premise": "The man is playing a guitar", "hypothesis": "The man is playing a harp", "label": 2 }
+{ "premise": "A dog is barking loudly", "hypothesis": "The animal is making lots of noise", "label": 0 }
+{ "premise": "A dog is barking loudly", "hypothesis": "The animal is big", "label": 1 }
+{ "premise": "A dog is barking loudly", "hypothesis": "The animal is silent", "label": 2 }
+{ "premise": "The cake is in the oven", "hypothesis": "The cake is cooking", "label": 0 }
+{ "premise": "The cake is in the oven", "hypothesis": "The cake is big", "label": 1 }
+{ "premise": "The cake is in the oven", "hypothesis": "The cake is being decorated", "label": 2 }
+{ "premise": "She is reading a book", "hypothesis": "She is not driving", "label": 0 }
+{ "premise": "She is reading a book", "hypothesis": "She is sad", "label": 1 }
+{ "premise": "She is reading a book", "hypothesis": "She is looking at a magazine", "label": 2 }
+{ "premise": "The car is moving fast", "hypothesis": "The vehicle is speeding", "label": 0 }
+{ "premise": "The car is moving fast", "hypothesis": "The vehicle is a truck", "label": 1 }
+{ "premise": "The car is moving fast", "hypothesis": "The vehicle is moving slow", "label": 2 }
+{ "premise": "Birds are flying in the sky", "hypothesis": "The birds are moving", "label": 0 }
+{ "premise": "Birds are flying in the sky", "hypothesis": "They are flying fast", "label": 1 }
+{ "premise": "Birds are flying in the sky", "hypothesis": "Birds are swimming in the ocean", "label": 2 }
+{ "premise": "He is cooking dinner", "hypothesis": "He is preparing a meal", "label": 0 }
+{ "premise": "He is cooking dinner", "hypothesis": "He is cooking for his wife", "label": 1 }
+{ "premise": "He is cooking dinner", "hypothesis": "He is driving a car", "label": 2 }
+{ "premise": "The window is open", "hypothesis": "The window is not closed", "label": 0 }
+{ "premise": "The window is open", "hypothesis": "The window is letting in cold air", "label": 1 }
+{ "premise": "The window is open", "hypothesis": "The window is closed", "label": 2 }
+{ "premise": "Children are playing soccer", "hypothesis": "Children are running", "label": 0 }
+{ "premise": "Children are playing soccer", "hypothesis": "The children are at school", "label": 1 }
+{ "premise": "Children are playing soccer", "hypothesis": "Adults are playing soccer without children", "label": 2 }
+{ "premise": "The phone is ringing", "hypothesis": "The phone is not silent", "label": 0 }
+{ "premise": "The phone is ringing", "hypothesis": "The phone is lost", "label": 1 }
+{ "premise": "The phone is ringing", "hypothesis": "The phone is silent", "label": 2 }
+{ "premise": "It's raining outside", "hypothesis": "The weather is dreary", "label": 0 }
+{ "premise": "It's raining outside", "hypothesis": "It is the month of December", "label": 1 }
+{ "premise": "It's raining outside", "hypothesis": "The weather is dry", "label": 2 }
+{ "premise": "The painter is drawing a portrait", "hypothesis": "The artist is creating art", "label": 0 }
+{ "premise": "The painter is drawing a portrait", "hypothesis": "The artist is a girl", "label": 1 }
+{ "premise": "The painter is drawing a portrait", "hypothesis": "The artist is creating a sculpture", "label": 2 }
+{ "premise": "The train is late", "hypothesis": "The train is taking longer than expected", "label": 0 }
+{ "premise": "The train is late", "hypothesis": "The train is red", "label": 1 }
+{ "premise": "The train is late", "hypothesis": "The train is on time", "label": 2 }
+{ "premise": "He is studying mathematics", "hypothesis": "He is learning about numbers", "label": 0 }
+{ "premise": "He is studying mathematics", "hypothesis": "He is dumb", "label": 1 }
+{ "premise": "He is studying mathematics", "hypothesis": "He is learning about english", "label": 2 }
+{ "premise": "The bird is in the cage", "hypothesis": "The bird is trapped", "label": 0 }
+{ "premise": "The bird is in the cage", "hypothesis": "The bird is blue", "label": 1 }
+{ "premise": "The bird is in the cage", "hypothesis": "The bird is flying freely", "label": 2 }
+{ "premise": "She is singing a song", "hypothesis": "She is performing music", "label": 0 }
+{ "premise": "She is singing a song", "hypothesis": "She is cold", "label": 1 }
+{ "premise": "She is singing a song", "hypothesis": "She is sitting down quietly", "label": 2 }
+{ "premise": "The lamp is turned off", "hypothesis": "The lamp is not on", "label": 0 }
+{ "premise": "The lamp is turned off", "hypothesis": "It is loud in the room", "label": 1 }
+{ "premise": "The lamp is turned off", "hypothesis": "The room is bright", "label": 2 }
+{ "premise": "The computer is new", "hypothesis": "The computer came out last month", "label": 0 }
+{ "premise": "The computer is new", "hypothesis": "The computer is a MacBook", "label": 1 }
+{ "premise": "The computer is new", "hypothesis": "The computer is old", "label": 2 }
+{ "premise": "The book is on the shelf", "hypothesis": "The book is over there on the shelf", "label": 0 }
+{ "premise": "The book is on the shelf", "hypothesis": "The book is heavy", "label": 1 }
+{ "premise": "The book is on the shelf", "hypothesis": "The book is on the table", "label": 2 }
+{ "premise": "She is laughing", "hypothesis": "She is happy", "label": 0 }
+{ "premise": "She is laughing", "hypothesis": "She is wearing blue", "label": 1 }
+{ "premise": "She is laughing", "hypothesis": "She is sad", "label": 2 }
+{ "premise": "Let's eat, grandma", "hypothesis": "I am with grandma", "label": 0 }
+{ "premise": "Let's eat, grandma", "hypothesis": "Grandma cooked a meal", "label": 1 }
+{ "premise": "Let's eat, grandma", "hypothesis": "Let's eat grandma", "label": 2 }
+{ "premise": "A woman, without her man, is nothing", "hypothesis": "A man helps a woman", "label": 0 }
+{ "premise": "A woman, without her man, is nothing", "hypothesis": "A woman wants to have a man", "label": 1 }
+{ "premise": "A woman, without her man, is nothing", "hypothesis": "A woman: without her, man is nothing", "label": 2 }
+{ "premise": "We're going to learn to cut and paste kids", "hypothesis": "We are learning to cut and paste", "label": 0 }
+{ "premise": "We're going to learn to cut and paste kids", "hypothesis": "We're in computer class", "label": 1 }
+{ "premise": "We're going to learn to cut and paste kids", "hypothesis": "We're going to learn to cut and paste, kids", "label": 2}
+{ "premise": "Stop clubbing baby seals", "hypothesis": "Don't club the seals", "label": 0 }
+{ "premise": "Stop clubbing baby seals", "hypothesis": "The baby seals are fast", "label": 1 }
+{ "premise": "Stop clubbing baby seals", "hypothesis": "Stop clubbing, baby seals", "label": 2 }
+{ "premise": "I like cooking my family and pets", "hypothesis": "Cooking family and pets is something I like", "label": 0 }
+{ "premise": "I like cooking my family and pets", "hypothesis": "My pets like cooking", "label": 1 }
+{ "premise": "I like cooking my family and pets", "hypothesis": "I like cooking, my family, and pets", "label": 2 }
+{ "premise": "Most of the time, travelers worry about their luggage", "hypothesis": "Travelers are wary of their luggage", "label": 0 }
+{ "premise": "Most of the time, travelers worry about their luggage", "hypothesis": "Travelers like to travel with Delta", "label": 1 }
+{ "premise": "Most of the time, travelers worry about their luggage", "hypothesis": "Most of the time travelers worry about their luggage", "label": 2 }
+{ "premise": "Don't stop", "hypothesis": "Keep going", "label": 0 }
+{ "premise": "Don't stop", "hypothesis": "Randon thing that has nothing to do with the premise", "label": 1 }
+{ "premise": "Don't stop", "hypothesis": "Don't, stop", "label": 2 }
+{ "premise": "Call me Ishmael", "hypothesis": "My name is Ishmael", "label": 0 }
+{ "premise": "Call me Ishmael", "hypothesis": "I like pie", "label": 1 }
+{ "premise": "Call me Ishmael", "hypothesis": "Call me, Ishmael", "label": 2 }
+{ "premise": "The teacher said the student is brilliant", "hypothesis": "The teacher thinks the student is smart", "label": 0 }
+{ "premise": "The teacher said the student is brilliant", "hypothesis": "The student likes pie", "label": 1 }
+{ "premise": "The teacher said the student is brilliant", "hypothesis": "The teacher, said the student, is brilliant", "label": 2 }
+{ "premise": "She is not unhappy", "hypothesis": "She is happy", "label": 0 }
+{ "premise": "She is not unhappy", "hypothesis": "She likes pie", "label": 1 }
+{ "premise": "She is not unhappy", "hypothesis": "She is not not unhappy", "label": 2 }
+{ "premise": "He will not fail the test", "hypothesis": "He will pass the test", "label": 0 }
+{ "premise": "He will not fail the test", "hypothesis": "He likes pie", "label": 1 }
+{ "premise": "He will not fail the test", "hypothesis": "He will not not fail the test", "label": 2 }
+{ "premise": "He will go to the park", "hypothesis": "He said he will go", "label": 0 }
+{ "premise": "He will go to the park", "hypothesis": "He likes pie", "label": 1 }
+{ "premise": "He will go to the park", "hypothesis": "He didn't say he would go, he said he would not go.", "label": 2 }
+{ "premise": "They are not going to the party", "hypothesis": "They are passing on to the party", "label": 0 }
+{ "premise": "They are not going to the party", "hypothesis": "They don't like cake", "label": 1 }
+{ "premise": "They are not going to the party", "hypothesis": "They are not not going to the party", "label": 2 }
+{ "premise": "I do not like this movie", "hypothesis": "The movie, in my opinion, is not good", "label": 0 }
+{ "premise": "I do not like this movie", "hypothesis": "I do not like pie", "label": 1 }
+{ "premise": "I do not like this movie", "hypothesis": "I do not not like this movie", "label": 2 }
+{ "premise": "She is not unaware of the problem", "hypothesis": "She knows about the problem", "label": 0 }
+{ "premise": "She is not unaware of the problem", "hypothesis": "She likes pie", "label": 1 }
+{ "premise": "She is not unaware of the problem", "hypothesis": "She is not not unaware of the problem", "label": 2 }
+{ "premise": "He is not often late", "hypothesis": "He is often on time", "label": 0 }
+{ "premise": "He is not often late", "hypothesis": "He does not like pie", "label": 1 }
+{ "premise": "He is not often late", "hypothesis": "He is not not often late", "label": 2 }
+{ "premise": "They are not always right", "hypothesis": "They are sometimes wrong", "label": 0 }
+{ "premise": "They are not always right", "hypothesis": "They do not like pie", "label": 1 }
+{ "premise": "They are not always right", "hypothesis": "They are not not always right", "label": 2 }
+{ "premise": "I am not sure about that", "hypothesis": "I don't know", "label": 0 }
+{ "premise": "I am not sure about that", "hypothesis": "I am not pie", "label": 1 }
+{ "premise": "I am not sure about that", "hypothesis": "I am not not sure about that", "label": 2 }
+{ "premise": "She does not dislike the gift", "hypothesis": "She likes the gift", "label": 0 }
+{ "premise": "She does not dislike the gift", "hypothesis": "She is going to the ball", "label": 1 }
+{ "premise": "She does not dislike the gift", "hypothesis": "She does not not dislike the gift", "label": 2 }
+{ "premise": "They were not unhappy with the decision", "hypothesis": "They were happy with the decision", "label": 0 }
+{ "premise": "They were not unhappy with the decision", "hypothesis": "They like pie", "label": 1 }
+{ "premise": "They were not unhappy with the decision", "hypothesis": "They were not not unhappy with the decision", "label": 2 }
+{ "premise": "He has a pet cat", "hypothesis": "He has a calico cat", "label": 0 }
+{ "premise": "He has a pet cat", "hypothesis": "He is wearing yellow shorts", "label": 1 }
+{ "premise": "He has a pet cat", "hypothesis": "He has a pet bat", "label": 2 }
+{ "premise": "She found a rare coin", "hypothesis": "She found an old Greek coin", "label": 0 }
+{ "premise": "She found a rare coin", "hypothesis": "It was a sunny day", "label": 1 }
+{ "premise": "She found a rare coin", "hypothesis": "He fund a rare coin", "label": 2 }
+{ "premise": "The bird is in the nest", "hypothesis": "The bird is feeding it's chicks", "label": 0 }
+{ "premise": "The bird is in the nest", "hypothesis": "The bird is in the west", "label": 1 }
+{ "premise": "The bird is in the nest", "hypothesis": "The bird is in the ground", "label": 2 }
+{ "premise": "He drew a boat", "hypothesis": "He drew a cruise ship", "label": 0 }
+{ "premise": "He drew a boat", "hypothesis": "He is at school", "label": 1 }
+{ "premise": "He drew a boat", "hypothesis": "He drew a coat", "label": 2 }
+{ "premise": "The room has a mat", "hypothesis": "The mat is in the room", "label": 0 }
+{ "premise": "The room has a mat", "hypothesis": "The room is big", "label": 1 }
+{ "premise": "The room has a mat", "hypothesis": "The room has a hat", "label": 2 }
+{ "premise": "She bought a new vase", "hypothesis": "She bought a vase", "label": 0 }
+{ "premise": "She bought a new vase", "hypothesis": "She likes pie", "label": 1 }
+{ "premise": "She bought a new vase", "hypothesis": "She bought a new baseball", "label": 2 }
+{ "premise": "The chef cooks a dish", "hypothesis": "The chef cooks", "label": 0 }
+{ "premise": "The chef cooks a dish", "hypothesis": "The chef cooked on Tuesday", "label": 1 }
+{ "premise": "The chef cooks a dish", "hypothesis": "The chef cooks a pastry", "label": 2 }
+{ "premise": "He writes with a pen", "hypothesis": "He writes with ink", "label": 0 }
+{ "premise": "He writes with a pen", "hypothesis": "He likes pie", "label": 1 }
+{ "premise": "He writes with a pen", "hypothesis": "He writes with a hen", "label": 2 }
+{ "premise": "They planted a rose", "hypothesis": "They planted a flower", "label": 0 }
+{ "premise": "They planted a rose", "hypothesis": "They like pie", "label": 1 }
+{ "premise": "They planted a rose", "hypothesis": "They planted a hose", "label": 2 }
+{ "premise": "The light is dim", "hypothesis": "The lig ht is not bright", "label": 0 }
+{ "premise": "The light is dim", "hypothesis": "The pie is good", "label": 1 }
+{ "premise": "The light is dim", "hypothesis": "The light is bright", "label": 2 }
+{ "premise": "The man is a doctor", "hypothesis": "The man has a job", "label": 0 }
+{ "premise": "The man is a doctor", "hypothesis": "The man likes pie", "label": 1 }
+{ "premise": "The man is a doctor", "hypothesis": "The woman is a doctor", "label": 2 }
+{ "premise": "The woman is stronger than the man", "hypothesis": "The woman is strong", "label": 0 }
+{ "premise": "The woman is stronger than the man", "hypothesis": "The woman likes pie", "label": 1 }
+{ "premise": "The woman is stronger than the man", "hypothesis": "The woman is stronger than the van", "label": 2 }
+{ "premise": "People when to the park to run", "hypothesis": "Pople went to the park to run", "label": 0 }
+{ "premise": "People when to the park to run", "hypothesis": "The people like pie", "label": 1 }
+{ "premise": "People when to the park to run", "hypothesis": "Pople went to the park to read a book", "label": 2 }
+{ "premise": "The dog barked loudly at the mailman", "hypothesis": "The dog barked loudy at the mailman", "label": 0 }
+{ "premise": "The dog barked loudly at the mailman", "hypothesis": "The dog likes pie", "label": 1 }
+{ "premise": "The dog barked loudly at the mailman", "hypothesis": "The mailman barked loudly", "label": 2 }
+{ "premise": "NLP is a difficult subject", "hypothesis": "NLP is a difficult suject", "label": 0 }
+{ "premise": "NLP is a difficult subject", "hypothesis": "English class is hard", "label": 1 }
+{ "premise": "NLP is a difficult subject", "hypothesis": "The easiest subject is NLP", "label": 2 }
+{ "premise": "People have studied it since the beginning of time", "hypothesis": "People have studied it ince the beginning of time", "label": 0 }
+{ "premise": "People have studied it since the beginning of time", "hypothesis": "People like pie a lot", "label": 1 }
+{ "premise": "People have studied it since the beginning of time", "hypothesis": "The beginning of time was in 2001", "label": 2 }
+{ "premise": "The cat in the hat was fat", "hypothesis": "The cat in the hat was very fat", "label": 0 }
+{ "premise": "The cat in the hat was fat", "hypothesis": "The fat cat ate a lot of pie", "label": 1 }
+{ "premise": "The cat in the hat was fat", "hypothesis": "The fat in the cat was hat", "label": 2 }
+{ "premise": "The tester was testing", "hypothesis": "The tester tests things", "label": 0 }
+{ "premise": "The tester was testing", "hypothesis": "The tester likes pie", "label": 1 }
+{ "premise": "The tester was testing", "hypothesis": "The tester did nothing", "label": 2 }
+{ "premise": "Harmonicas are a musical instrument", "hypothesis": "Harmonicas make noise", "label": 0 }
+{ "premise": "Harmonicas are a musical instrument", "hypothesis": "Birds don't like pie", "label": 1 }
+{ "premise": "Harmonicas are a musical instrument", "hypothesis": "Harmonicas are cars", "label": 2 }
+{ "premise": "The best dogs are not small", "hypothesis": "The best dogs are large", "label": 0 }
+{ "premise": "The best dogs are not small", "hypothesis": "The dog is long-haired", "label": 1 }
+{ "premise": "The best dogs are not small", "hypothesis": "The best dogs are tiny", "label": 2 }

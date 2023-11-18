@@ -5,6 +5,7 @@ from helpers import prepare_dataset_nli, prepare_train_dataset_qa, \
     prepare_validation_dataset_qa, QuestionAnsweringTrainer, compute_accuracy
 import os
 import json
+from collections import Counter
 
 NUM_PREPROCESSING_WORKERS = 2
 
@@ -200,6 +201,11 @@ def main():
                     example_with_prediction = dict(example)
                     example_with_prediction['predicted_scores'] = eval_predictions.predictions[i].tolist()
                     example_with_prediction['predicted_label'] = int(eval_predictions.predictions[i].argmax())
+                    example_with_prediction['correct'] = example_with_prediction['predicted_label'] == example_with_prediction['label']
+                    if example_with_prediction['hypothesis'].lower().count('not') == 1: 
+                        example_with_prediction['type'] = 'negation'
+                    if example_with_prediction['hypothesis'].lower().count('not') > 1:
+                        example_with_prediction['type'] = 'double negation'
                     f.write(json.dumps(example_with_prediction))
                     f.write('\n')
 
