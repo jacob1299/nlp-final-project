@@ -1,0 +1,180 @@
+{ "premise": "I can't get no satisfaction.", "hypothesis": "Someone is struggling to find satisfaction.", "label": 0 }
+{ "premise": "I can't get no satisfaction.", "hypothesis": "The person's clothing color is not specified.", "label": 1 }
+{ "premise": "I can't get no satisfaction.", "hypothesis": "The person is fully satisfied with their situation.", "label": 2 }
+{ "premise": "He doesn't know nothing about it.", "hypothesis": "The individual is unaware of the situation.", "label": 0 }
+{ "premise": "He doesn't know nothing about it.", "hypothesis": "The man's clothing is not mentioned in the statement.", "label": 1 }
+{ "premise": "He doesn't know nothing about it.", "hypothesis": "He is fully informed about the matter.", "label": 2 }
+{ "premise": "There isn't no way to fix it.", "hypothesis": "The situation is beyond repair.", "label": 0 }
+{ "premise": "There isn't no way to fix it.", "hypothesis": "The color of someone's shirt is irrelevant to fixing the issue.", "label": 1 }
+{ "premise": "There isn't no way to fix it.", "hypothesis": "There is a method available to fix the problem.", "label": 2 }
+{ "premise": "You don't need no education.", "hypothesis": "Education is not a requirement for the individual.", "label": 0 }
+{ "premise": "You don't need no education.", "hypothesis": "The individual actually do not require education.", "label": 1 }
+{ "premise": "You don't need no education.", "hypothesis": "The individual requires educational instruction.", "label": 2 }
+{ "premise": "She isn't going nowhere tonight.", "hypothesis": "She is staying home tonight", "label": 0 }
+{ "premise": "She isn't going nowhere tonight.", "hypothesis": "The situation may or may not involve a man.", "label": 1 }
+{ "premise": "She isn't going nowhere tonight.", "hypothesis": "No woman is involved in the situation." , "label": 2 }
+{ "premise": "They don't have nothing left to say.", "hypothesis": "They have nothing left to say", "label": 0 }
+{ "premise": "They don't have nothing left to say.", "hypothesis": "They are wearing a red shirt", "label": 1 }
+{ "premise": "They don't have nothing left to say.", "hypothesis": "They have something left to say", "label": 2 }
+{ "premise": "I can't find my keys nowhere.", "hypothesis": "I can't find my keys", "label": 0 }
+{ "premise": "I can't find my keys nowhere.", "hypothesis": "I am wearing shoes", "label": 1 }
+{ "premise": "I can't find my keys nowhere.", "hypothesis": "I found my keys", "label": 2 }
+{ "premise": "He doesn't hardly speak to anyone.", "hypothesis": "He doesn't speak to anyone", "label": 0 }
+{ "premise": "He doesn't hardly speak to anyone.", "hypothesis": "His name is John", "label": 1 }
+{ "premise": "He doesn't hardly speak to anyone.", "hypothesis": "He is very outgoing", "label": 2 }
+{ "premise": "We can't do nothing about this.", "hypothesis": "We can't do anything about this", "label": 0 }
+{ "premise": "We can't do nothing about this.", "hypothesis": "The sky is blue", "label": 1 }
+{ "premise": "We can't do nothing about this.", "hypothesis": "We can do something about this", "label": 2 }
+{ "premise": "She hasn't never been to Paris.", "hypothesis": "She hasn't been to Paris.", "label": 0 }
+{ "premise": "She hasn't never been to Paris.", "hypothesis": "She is fourty years old", "label": 1 }
+{ "premise": "She hasn't never been to Paris.", "hypothesis": "She has been to Paris", "label": 2 }
+{ "premise": "I couldn't see nobody in the room.", "hypothesis": "I couldn't see anybody in the room", "label": 0 }
+{ "premise": "I couldn't see nobody in the room.", "hypothesis": "I am a man", "label": 1 }
+{ "premise": "I couldn't see nobody in the room.", "hypothesis": "I could see everybody in the room", "label": 2 }
+{ "premise": "There wasn't no reason to leave early.", "hypothesis": "There was reason to leave early.", "label": 0 }
+{ "premise": "There wasn't no reason to leave early.", "hypothesis": "It felt nice outside.", "label": 1 }
+{ "premise": "There wasn't no reason to leave early.", "hypothesis": "There was reason to leave early.", "label": 2 }
+{ "premise": "You won't find nobody here.", "hypothesis": "We won't find anybody here.", "label": 0 }
+{ "premise": "You won't find nobody here.", "hypothesis": "Pluto is a planet.", "label": 1 }
+{ "premise": "You won't find nobody here.", "hypothesis": "We will find everybody here.", "label": 2 }
+{ "premise": "He doesn't want no help.", "hypothesis": "He doesn't want help.", "label": 0 }
+{ "premise": "He doesn't want no help.", "hypothesis": "The man is wearing a red shirt.", "label": 1 }
+{ "premise": "He doesn't want no help.", "hypothesis": "He wants help.", "label": 2 }
+{ "premise": "I can't hear nothing with this noise.", "hypothesis": "I can't hear anything with this noise.", "label": 0 }
+{ "premise": "I can't hear nothing with this noise.", "hypothesis": "He is an old man.", "label": 1 }
+{ "premise": "I can't hear nothing with this noise.", "hypothesis": "I can hear everything despite the noise.", "label": 2 }
+{ "premise": "She doesn't eat nothing unhealthy.", "hypothesis": "She eats healthily.", "label": 0 }
+{ "premise": "She doesn't eat nothing unhealthy.", "hypothesis": "She is a dietician.", "label": 1 }
+{ "premise": "She doesn't eat nothing unhealthy.", "hypothesis": "She eats unhealthily.", "label": 2 }
+{ "premise": "I haven't got no time to spare.", "hypothesis": "I have no time to spare.", "label": 0 }
+{ "premise": "I haven't got no time to spare.", "hypothesis": "I am from Alabama.", "label": 1 }
+{ "premise": "I haven't got no time to spare.", "hypothesis": "I have time to spare.", "label": 2 }
+{ "premise": "They don't believe in nothing.", "hypothesis": "They don't believe in anything.", "label": 0 }
+{ "premise": "They don't believe in nothing.", "hypothesis": "They are from Ohio.", "label": 1 }
+{ "premise": "They don't believe in nothing.", "hypothesis": "They believe in the theory.", "label": 2 }
+{ "premise": "There wasn't nobody at the party.", "hypothesis": "There was nobody at the party.", "label": 0 }
+{ "premise": "There wasn't nobody at the party.", "hypothesis": "The party was outside.", "label": 1 }
+{ "premise": "There wasn't nobody at the party.", "hypothesis": "There was a lot of people at the party.", "label": 2 }
+{ "premise": "I can't understand no one in this crowd.", "hypothesis": "I can't understand anyone in this crowd.", "label": 0 }
+{ "premise": "I can't understand no one in this crowd.", "hypothesis": "I have two cats.", "label": 1 }
+{ "premise": "I can't understand no one in this crowd.", "hypothesis": "I can understand everyone in this crowd.", "label": 2 }
+{ "premise": "Oh great, another email!", "hypothesis": "I do not like emails.", "label": 0 }
+{ "premise": "Oh great, another email!", "hypothesis": "I use Gmail.", "label": 1 }
+{ "premise": "Oh great, another email!", "hypothesis": "The man loves to receive emails.", "label": 2 }
+{ "premise": "I just love getting stuck in traffic.", "hypothesis": "I love getting stuck in traffic.", "label": 0 }
+{ "premise": "I just love getting stuck in traffic.", "hypothesis": "I drive a BMW.", "label": 1 }
+{ "premise": "I just love getting stuck in traffic.", "hypothesis": "I do not enjoy getting stuck in traffic.", "label": 2 }
+{ "premise": "This is just what I needed, a flat tire.", "hypothesis": "I do not like flat tires.", "label": 0 }
+{ "premise": "This is just what I needed, a flat tire.", "hypothesis": "I drive a Nissan.", "label": 1 }
+{ "premise": "This is just what I needed, a flat tire.", "hypothesis": "I like flat tires.", "label": 2 }
+{ "premise": "Well, this day couldn't get any better!", "hypothesis": "This day has been terrible.", "label": 0 }
+{ "premise": "Well, this day couldn't get any better!", "hypothesis": "It is a Monday.", "label": 1 }
+{ "premise": "Well, this day couldn't get any better!", "hypothesis": "This day has been great.", "label": 2 }
+{ "premise": "I'm absolutely thrilled to be working overtime again.", "hypothesis": "I do not like working overtime", "label": 0 }
+{ "premise": "I'm absolutely thrilled to be working overtime again.", "hypothesis": "I am working at McDonald's.", "label": 1 }
+{ "premise": "I'm absolutely thrilled to be working overtime again.", "hypothesis": "I like working overtime", "label": 2 }
+{ "premise": "Oh, fantastic, it's raining again.", "hypothesis": "I am not happy it is raining again.", "label": 0 }
+{ "premise": "Oh, fantastic, it's raining again.", "hypothesis": "It is Tuesday.", "label": 1 }
+{ "premise": "Oh, fantastic, it's raining again.", "hypothesis": "I am happy it is raining again.", "label": 2 }
+{ "premise": "Sure, I adore listening to loud music at 3 AM.", "hypothesis": "I do not like listening to loud music at 3am.", "label": 0 }
+{ "premise": "Sure, I adore listening to loud music at 3 AM.", "hypothesis": "I like cats.", "label": 1 }
+{ "premise": "Sure, I adore listening to loud music at 3 AM.", "hypothesis": "I like listening to loud music at 3am.", "label": 2 }
+{ "premise": "What a pleasant surprise, another bill in the mail.", "hypothesis": "I do not enjoy paying my bills.", "label": 0 }
+{ "premise": "What a pleasant surprise, another bill in the mail.", "hypothesis": "The bill is from TMobile.", "label": 1 }
+{ "premise": "What a pleasant surprise, another bill in the mail.", "hypothesis": "I enjoy paying my bills.", "label": 2 }
+{ "premise": "I can't wait to clean up this mess.", "hypothesis": "I am not excited to clean up this mess.", "label": 0 }
+{ "premise": "I can't wait to clean up this mess.", "hypothesis": "The mess is from a child.", "label": 1 }
+{ "premise": "I can't wait to clean up this mess.", "hypothesis": "I am excited to clean up this mess.", "label": 2 }
+{ "premise": "Yay, another Monday!", "hypothesis": "They do not like Mondays.", "label": 0 }
+{ "premise": "Yay, another Monday!", "hypothesis": "It is September.", "label": 1 }
+{ "premise": "Yay, another Monday!", "hypothesis": "They love Mondays.", "label": 2 }
+{ "premise": "Just what I wanted, another helping of Aunt Edna's casserole...", "hypothesis": "I do not like Aunt Edna's casserole.", "label": 0 }
+{ "premise": "Just what I wanted, another helping of Aunt Edna's casserole...", "hypothesis": "Aunt Edna lives in Michigan.", "label": 1 }
+{ "premise": "Just what I wanted, another helping of Aunt Edna's casserole...", "hypothesis": "I do not like Aunt Edna's casserole.", "label": 2 }
+{ "premise": "Look at me, being as productive as ever!", "hypothesis": "I am unproductive.", "label": 0 }
+{ "premise": "Look at me, being as productive as ever!", "hypothesis": "I do not like cherry pie.", "label": 1 }
+{ "premise": "Look at me, being as productive as ever!", "hypothesis": "I am very productive.", "label": 2 }
+{ "premise": "I'm sure he's a rocket scientist.", "hypothesis": "I think he is dumb.", "label": 0 }
+{ "premise": "I'm sure he's a rocket scientist.", "hypothesis": "His name is Neil Armstrong.", "label": 1 }
+{ "premise": "I'm sure he's a rocket scientist.", "hypothesis": "I think he is very smart.", "label": 2 }
+{ "premise": "Yes, politicians always tell the truth.", "hypothesis": "Politicians do not always tell the truth.", "label": 0 }
+{ "premise": "Yes, politicians always tell the truth.", "hypothesis": "Politicians like mushrooms and gravy.", "label": 1 }
+{ "premise": "Yes, politicians always tell the truth.", "hypothesis": "Politicians always tell the truth.", "label": 2 }
+{ "premise": "This is exactly how I imagined my vacation.", "hypothesis": "I am not enjoying my vacation.", "label": 0 }
+{ "premise": "This is exactly how I imagined my vacation.", "hypothesis": "The vacation was to Maine.", "label": 1 }
+{ "premise": "This is exactly how I imagined my vacation.", "hypothesis": "I am enjoying my vacation.", "label": 2 }
+{ "premise": "I have all the time in the world, no rush.", "hypothesis": "I do not have much time.", "label": 0 }
+{ "premise": "I have all the time in the world, no rush.", "hypothesis": "It is a Friday.", "label": 1 }
+{ "premise": "I have all the time in the world, no rush.", "hypothesis": "I have a lot of time.", "label": 2 }
+{ "premise": "This is the height of fashion.", "hypothesis": "It is not very fashionable.", "label": 0 }
+{ "premise": "This is the height of fashion.", "hypothesis": "The coat is blue.", "label": 1 }
+{ "premise": "This is the height of fashion.", "hypothesis": "It is very fashionable.", "label": 2 }
+{ "premise": "Nothing beats a day at the DMV.", "hypothesis": "I do not like spending my day at the DMV.", "label": 0 }
+{ "premise": "Nothing beats a day at the DMV.", "hypothesis": "It is raining.", "label": 1 }
+{ "premise": "Nothing beats a day at the DMV.", "hypothesis": "I like spending my day at the DMV.", "label": 2 }
+{ "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I do not like paying my taxes.", "label": 0 }
+{ "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I live in the United States.", "label": 1 }
+{ "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I like paying my taxes.", "label": 2 }
+{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I do not like the team meetings.", "label": 0 }
+{ "premise": "Oh, I live for these team meetings.", "hypothesis": "The team meetings are every Saturday.", "label": 1 }
+{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I like the team meetings.", "label": 2 }
+{ "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "I did not actually break any ice.", "label": 0 }
+{ "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "The meeting was on Monday at 5pm.", "label": 1 }
+{ "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "I literally broke ice at the meeting.", "label": 2 }
+{ "premise": "Finishing this puzzle was a piece of cake.", "hypothesis": "The puzzle was very easy.", "label": 0 }
+{ "premise": "Finishing this puzzle was a piece of cake.", "hypothesis": "The puzzle was of a donkey.", "label": 1 }
+{ "premise": "Finishing this puzzle was a piece of cake.", "hypothesis": "The puzzle was very hard.", "label": 2 }
+{ "premise": "I'm exhausted; I need to hit the sack early tonight.", "hypothesis": "I need to go to be early tonight.", "label": 0 }
+{ "premise": "I'm exhausted; I need to hit the sack early tonight.", "hypothesis": "It is a Monday.", "label": 1 }
+{ "premise": "I'm exhausted; I need to hit the sack early tonight.", "hypothesis": "I need to stay up very late tonight.", "label": 2 }
+{ "premise": "He missed the boat on investing in that startup.", "hypothesis": "He missed the chance to invest in the startup.", "label": 0 }
+{ "premise": "He missed the boat on investing in that startup.", "hypothesis": "His name was Allen.", "label": 1 }
+{ "premise": "He missed the boat on investing in that startup.", "hypothesis": "He invested in the startup.", "label": 2 }
+{ "premise": "I guess I'll have to bite the bullet and pay the fine.", "hypothesis": "I will have to pay the fine.", "label": 0 }
+{ "premise": "I guess I'll have to bite the bullet and pay the fine.", "hypothesis": "The fine is for speeding.", "label": 1 }
+{ "premise": "I guess I'll have to bite the bullet and pay the fine.", "hypothesis": "I will not pay the fine.", "label": 2 }
+{ "premise": "That designer dress cost an arm and a leg.", "hypothesis": "The dress is expensive.", "label": 0 }
+{ "premise": "That designer dress cost an arm and a leg.", "hypothesis": "The dress is blue.", "label": 1 }
+{ "premise": "That designer dress cost an arm and a leg.", "hypothesis": "The dress is cheap.", "label": 2 }
+{ "premise": "Everyone is jumping on the bandwagon of this new diet trend.", "hypothesis": "The diet trend is popular.", "label": 0 }
+{ "premise": "Everyone is jumping on the bandwagon of this new diet trend.", "hypothesis": "The diet trend is keto.", "label": 1 }
+{ "premise": "Everyone is jumping on the bandwagon of this new diet trend.", "hypothesis": "The diet trend is not popular.", "label": 2 }
+{ "premise": "You hit the nail on the head with that explanation.", "hypothesis": "The explanation was good.", "label": 0 }
+{ "premise": "You hit the nail on the head with that explanation.", "hypothesis": "He was explaining a theory about gravity.", "label": 1 }
+{ "premise": "You hit the nail on the head with that explanation.", "hypothesis": "The explanation was not good.", "label": 2 }
+{ "premise": "He let the cat out of the bag about the surprise party.", "hypothesis": "He ruined the surprise party.", "label": 0 }
+{ "premise": "He let the cat out of the bag about the surprise party.", "hypothesis": "The party is next week.", "label": 1 }
+{ "premise": "He let the cat out of the bag about the surprise party.", "hypothesis": "He did not ruin the surprise party.", "label": 2 }
+{ "premise": "I'm caught between a rock and a hard place with these two job offers.", "hypothesis": "The job decision is difficult for me to make.", "label": 0 }
+{ "premise": "I'm caught between a rock and a hard place with these two job offers.", "hypothesis": "The jobs pay the same.", "label": 1 }
+{ "premise": "I'm caught between a rock and a hard place with these two job offers.", "hypothesis": "The job decision is easy for me to make.", "label": 2 }
+{ "premise": "She's burning the midnight oil to finish her thesis.", "hypothesis": "She is staying up late to finish her thesis each night.", "label": 0 }
+{ "premise": "She's burning the midnight oil to finish her thesis.", "hypothesis": "Her thesis is on contrast sets.", "label": 1 }
+{ "premise": "She's burning the midnight oil to finish her thesis.", "hypothesis": "She is not staying up late to finish her thesis each night.", "label": 2 }
+{ "premise": "Come on, spill the beans about the party plans!", "hypothesis": "Someone wants them to spoil the party plans.", "label": 0 }
+{ "premise": "Come on, spill the beans about the party plans!", "hypothesis": "The party is tomorrow.", "label": 1 }
+{ "premise": "Come on, spill the beans about the party plans!", "hypothesis": "Someone does not want them to spoil the party plans.", "label": 2 }
+{ "premise": "My old laptop finally kicked the bucket.", "hypothesis": "My old laptop is no broken.", "label": 0 }
+{ "premise": "My old laptop finally kicked the bucket.", "hypothesis": "My laptop is a MacBook Pro.", "label": 1 }
+{ "premise": "My old laptop finally kicked the bucket.", "hypothesis": "My old laptop still works.", "label": 2 }
+{ "premise": "He bit off more than he could chew with that big project.", "hypothesis": "The project was too big for him.", "label": 0 }
+{ "premise": "He bit off more than he could chew with that big project.", "hypothesis": "The project was on energy.", "label": 1 }
+{ "premise": "He bit off more than he could chew with that big project.", "hypothesis": "The project was not big enough for him.", "label": 2 }
+{ "premise": "I've made my offer, now the ball is in your court.", "hypothesis": "It is your turn to make a decision.", "label": 0 }
+{ "premise": "I've made my offer, now the ball is in your court.", "hypothesis": "The offer is for $20,000.", "label": 1 }
+{ "premise": "I've made my offer, now the ball is in your court.", "hypothesis": "It is not your turn to make a decision.", "label": 2 }
+{ "premise": "If you think I'm going to lend you more money, you're barking up the wrong tree.", "hypothesis": "I am not going to lend you money.", "label": 0 }
+{ "premise": "If you think I'm going to lend you more money, you're barking up the wrong tree.", "hypothesis": "The zoo has animals.", "label": 1 }
+{ "premise": "If you think I'm going to lend you more money, you're barking up the wrong tree.", "hypothesis": "I am going to lend you money.", "label": 2 }
+{ "premise": "Coffee shops in this city are a dime a dozen.", "hypothesis": "There are many coffee shops in this city.", "label": 0 }
+{ "premise": "Coffee shops in this city are a dime a dozen.", "hypothesis": "Coffee is from Brazil.", "label": 1 }
+{ "premise": "Coffee shops in this city are a dime a dozen.", "hypothesis": "There are hardly any coffee shops in this city.", "label": 2 }
+{ "premise": "Stop beating around the bush and tell me what happened.", "hypothesis": "Tell me what happened.", "label": 0 }
+{ "premise": "Stop beating around the bush and tell me what happened.", "hypothesis": "What happened was not good.", "label": 1 }
+{ "premise": "Stop beating around the bush and tell me what happened.", "hypothesis": "Do not tell me what happened.", "label": 2 }
+{ "premise": "It's no use crying over spilt milk; let's just move on.", "hypothesis": "Do not complain about it anymore.", "label": 0 }
+{ "premise": "It's no use crying over spilt milk; let's just move on.", "hypothesis": "Grass is green.", "label": 1 }
+{ "premise": "It's no use crying over spilt milk; let's just move on.", "hypothesis": "Please keep complaining.", "label": 2 }
+{ "premise": "Let's cut to the chase and get to the main point of the meeting.", "hypothesis": "Let's get to the point of the meeting.", "label": 0 }
+{ "premise": "Let's cut to the chase and get to the main point of the meeting.", "hypothesis": "The main point is that there were too many people at the event.", "label": 1 }
+{ "premise": "Let's cut to the chase and get to the main point of the meeting.", "hypothesis": "Let's continue not talking about the main point of the meeting.", "label": 2 }
