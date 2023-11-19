@@ -58,6 +58,7 @@
 { "premise": "I can't understand no one in this crowd.", "hypothesis": "I can't understand anyone in this crowd.", "label": 0 }
 { "premise": "I can't understand no one in this crowd.", "hypothesis": "I have two cats.", "label": 1 }
 { "premise": "I can't understand no one in this crowd.", "hypothesis": "I can understand everyone in this crowd.", "label": 2 }
+
 { "premise": "Oh great, another email!", "hypothesis": "I do not like emails.", "label": 0 }
 { "premise": "Oh great, another email!", "hypothesis": "I use Gmail.", "label": 1 }
 { "premise": "Oh great, another email!", "hypothesis": "The man loves to receive emails.", "label": 2 }
@@ -115,9 +116,10 @@
 { "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I do not like paying my taxes.", "label": 0 }
 { "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I live in the United States.", "label": 1 }
 { "premise": "I'm overjoyed to be paying taxes.", "hypothesis": "I like paying my taxes.", "label": 2 }
-{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I do not like the team meetings.", "label": 0 }
+
+{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I like the team meetings.", "label": 0 }
 { "premise": "Oh, I live for these team meetings.", "hypothesis": "The team meetings are every Saturday.", "label": 1 }
-{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I like the team meetings.", "label": 2 }
+{ "premise": "Oh, I live for these team meetings.", "hypothesis": "I do not like the team meetings.", "label": 2 }
 { "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "I did not actually break any ice.", "label": 0 }
 { "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "The meeting was on Monday at 5pm.", "label": 1 }
 { "premise": "I told a joke to break the ice at the meeting.", "hypothesis": "I literally broke ice at the meeting.", "label": 2 }
