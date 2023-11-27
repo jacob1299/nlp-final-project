@@ -5,7 +5,9 @@ from transformers import Trainer, EvalPrediction
 from transformers.trainer_utils import PredictionOutput
 from typing import Tuple
 from tqdm.auto import tqdm
-
+from sklearn.metrics import confusion_matrix
+import matplotlib.pyplot as plt
+import seaborn as sns
 QA_MAX_ANSWER_LENGTH = 30
 
 
@@ -34,6 +36,25 @@ def compute_accuracy(eval_preds: EvalPrediction):
             axis=1) == eval_preds.label_ids).astype(
             np.float32).mean().item()
     }
+
+def get_confusion_matrix(eval_preds: EvalPrediction):
+    labels = eval_preds.label_ids
+    predictions = np.argmax(eval_preds.predictions, axis=1)
+    print('labels: ')
+    print(labels)
+    print('predictions')
+    print(predictions)
+    cm = confusion_matrix(labels, predictions)
+
+    print("Confusion Matrix:\n", cm)
+
+    plt.figure(figsize=(8, 6))
+    sns.heatmap(cm, annot=True, fmt='g')
+    plt.xlabel('Predicted labels')
+    plt.ylabel('True labels')
+    plt.title('Confusion Matrix')
+    plt.show()
+
 
 
 # This function preprocesses a question answering dataset, tokenizing the question and context text
