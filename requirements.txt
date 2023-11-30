@@ -3,3 +3,6 @@ datasets
 torch
 tqdm
 transformers
+scikit-learn
+matplotlib
+seaborn

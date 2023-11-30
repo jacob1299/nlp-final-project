@@ -2,10 +2,11 @@ import datasets
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, \
     AutoModelForQuestionAnswering, Trainer, TrainingArguments, HfArgumentParser
 from helpers import prepare_dataset_nli, prepare_train_dataset_qa, \
-    prepare_validation_dataset_qa, QuestionAnsweringTrainer, compute_accuracy
+    prepare_validation_dataset_qa, QuestionAnsweringTrainer, compute_accuracy, get_confusion_matrix
 import os
 import json
 from collections import Counter
+
 
 NUM_PREPROCESSING_WORKERS = 2
 
@@ -148,6 +149,7 @@ def main():
     def compute_metrics_and_store_predictions(eval_preds):
         nonlocal eval_predictions
         eval_predictions = eval_preds
+        get_confusion_matrix(eval_preds)
         return compute_metrics(eval_preds)
 
     # Initialize the Trainer object with the specified arguments and the model and dataset we loaded above
@@ -202,10 +204,13 @@ def main():
                     example_with_prediction['predicted_scores'] = eval_predictions.predictions[i].tolist()
                     example_with_prediction['predicted_label'] = int(eval_predictions.predictions[i].argmax())
                     example_with_prediction['correct'] = example_with_prediction['predicted_label'] == example_with_prediction['label']
-                    if example_with_prediction['hypothesis'].lower().count('not') == 1: 
-                        example_with_prediction['type'] = 'negation'
-                    if example_with_prediction['hypothesis'].lower().count('not') > 1:
+                    
+                    if i < 60:
                         example_with_prediction['type'] = 'double negation'
+                    elif i < 120:
+                        example_with_prediction['type'] = 'sarcasm'
+                    else:
+                        example_with_prediction['type'] = 'figure of speech'
                     f.write(json.dumps(example_with_prediction))
                     f.write('\n')
 
