@@ -2,7 +2,7 @@ import datasets
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, \
     AutoModelForQuestionAnswering, Trainer, TrainingArguments, HfArgumentParser
 from helpers import prepare_dataset_nli, prepare_train_dataset_qa, \
-    prepare_validation_dataset_qa, QuestionAnsweringTrainer, compute_accuracy, get_confusion_matrix
+    prepare_validation_dataset_qa, QuestionAnsweringTrainer, compute_stuff, get_confusion_matrix
 import os
 import json
 from collections import Counter
@@ -140,7 +140,7 @@ def main():
         compute_metrics = lambda eval_preds: metric.compute(
             predictions=eval_preds.predictions, references=eval_preds.label_ids)
     elif args.task == 'nli':
-        compute_metrics = compute_accuracy
+        compute_metrics = compute_stuff
     
 
     # This function wraps the compute_metrics function, storing the model's predictions
