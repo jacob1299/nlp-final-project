@@ -28,176 +28,193 @@
 \maketitle
 
 \begin{abstract}
-  Many state of the art models perform very well across a broad spectrum of NLP tasks, however, detecting complex language patterns is still difficult. Though this can be achieved through many different routes, we propose that the simplest may be to re-train a well performing model on a small set of difficult examples. Analysis on the ELECTRA-SMALL model, trained on the SNLI dataset shows that re-training the model on a small set of challenging examples can increase the accuracy on detecting sarcasm by well over 50\%. This is a substantial increase, and the original model’s accuracy only dropped by a mere 1%. We show that through providing better training examples, a model can significantly improve its accuracy on various complex language patterns. 
+	State of the art language models have been shown to perform well across a broad spectrum of language modeling tasks like natural language inference (NLI), question answering (QA), and next token generation tasks as seen in applications like ChatGPT (cite). However, it is still quite simple to find examples that confuse language models and cause significant degradation in performance metrics. In this work, we propose one such set of "tricky" examples. We analyze the performance of the ELECTRA-SMALL model (cite) on the NLI task (cite) across three subsets of tricky examples: sarcasm, grammatically incorrect dialect, and idiomatic speech. We show that the model struggles to accurately classify such examples. While the model achieves a strong 85.8\% accuracy on the Stanford NLI (SNLI) dataset (cite), it is only able to achieve 50.9\% accuracy on the holdout portion of our curated tricky dataset. We also show that simply fine tuning the model on a small training portion of these examples improves the models ability to accurately classify new tricky examples while incurring almost no additional loss on the original SNLI dataset. Hence, we provide some evidence that providing higher quality, more diverse examples of real, albeit complex language patterns in training data can improve a model's ability to generalize across tricky examples.
 \end{abstract}
 
 \section{Introduction}
-In the evolving field of NLP, the performance of state-of-the-art models is continually being pushed to new heights. 
-These models excel across a broad spectrum of tasks, yet they often stumble when presented with complex language patterns. 
-This paper explores a simple approach to enhancing model performance in such scenarios. We focus on the ELECTRA-SMALL model, 
-a prominent player in the NLP domain.
+Models like GPT 3, GPT 3.5 Turbo, and GPT 4 (cite these three) have left the world speechless at the awe-inspiring
+capabilities of large language models (LLMs). In contrast, LLM failures like those in the early versions of Bing + ChatGPT
+have served as comedic inspiration for memes as well as the inspiration of nightmares for Microsoft stakeholders. This
+raises the question: given the strong results of LLMs in some domains, which problem classes cause LLMs to experience
+performance degradations? This work begins to explore this question.
 
-Despite its capabilities, the ELECTRA-SMALL model, like many in its class, struggles with intricate linguistic constructs such as sarcasm, 
-informal language, and figures of speech. These elements of language, often context-dependent and counter-intuitive, present a significant hurdle 
-for these systems. Our study proposes a solution to this, rooted in targeted retraining.
+Drawing inspiration from some of the well-known LLM failures mentioned earlier, we devised a set of "tricky" examples to
+test LLMs against, and we observed their behavior. These tricky examples are all examples of real language patterns that
+humans can decipher with relative ease. The examples are subdivided into three groups:  sarcasm, grammatically incorrect
+dialect, and idiomatic speech. We provide examples from each of these groups in a later section.
+A criticism the reader may levy against using sarcasm in text is that the notions of tone,
+body language, rate of speech, inflection, etc. aren't signals which are included in the text. The authors encourage those
+with such criticisms to consider times where they have been able to decipher sarcasm in text messages without any additional
+context. While the authors acknowledge the limitation that even humans cannot perfectly decipher sarcasm via text alone,
+it is certainly an achievable task and therefore still within the scope of our research question.
 
-We hypothesize that retraining a well-performing model on a carefully curated set of difficult examples can dramatically improve its ability 
-to decipher these complex language patterns. To test this, we conducted an in-depth analysis of the ELECTRA-SMALL model, initially trained 
-on the SNLI dataset. Our methodology involved appending to this training data with a selection of challenging examples, honing in on areas 
-where the model historically underperformed.
+We interrogate this question by training an instance of the ELECTRA-SMALL model. Despite its proven capabilities on other datasets,
+the model struggles with our tricky examples. Sarcasm, dialect, and idioms are often context dependent, non-literal, and
+difficult to parse grammatically. The authors expected when devising these examples that the model would struggle with these
+examples for the following reason:  the "default mode" of speech in most language training data is literal, mostly grammatically
+correct, and directly interpretable with respect to its meaning (not sarcastic).
 
-This paper presents our findings, which indicate a substantial improvement in the model's ability to recognize and interpret sarcasm, rising by 
-over 50\% in accuracy. Notably, this enhancement did not significantly detract from the model's overall performance on standard tasks, with 
-only a minimal drop in accuracy observed. We will discuss the implications of these results, shedding light on the potential for hand-annotating
-targeted examples to better handle the nuances of human language.
+Given this expectation, we also hypothesize that simply fine tuning a well-performing model on a carefully curated set
+of difficult examples can dramatically improve its ability to decipher these complex language patterns. To test this,
+we conducted an in-depth analysis of the ELECTRA-SMALL model, initially trained on the SNLI dataset and later fine tuned
+on our curated tricky examples.
 
 \section{Background}
 
 \subsection{Challenges in Natural Language Processing}
-These days, state-of-the-art NLP models perform quite well among a broad range of tasks. However, there remains significant progress
-to be had when it comes to detecting complex language patterns such as, but not limited to, informal speech, sarcasm, and figures of speech. The title
-of this paper alone shows that. 
-\subsection{The ELECTRA-SMALL Model}
-The ELECTRA-SMALL model was chosen because it is quicker to train than other models, and has less parameters, even though it is a robust
-model that outperforms many larger models. However, it's performance drops off significantly when given certain nuances in the English language.
-\subsection{Advancements in Model Retraining}
-Recent advancements in the field of NLP have shown that having a pristine training dataset is one of the most fundamental aspects
-of model performance. This approach promises to deepen the understanding we have of the relationship between good training data and 
-understanding complex language structures.
-\subsection{The Role of the SNLI Dataset}
-The Stanford Natural Language Inference (SNLI) dataset has been pivotal in training numerous NLP models, including ELECTRA-SMALL. 
-While it provides a broad spectrum of linguistic examples, its coverage of intricate language patterns is \href{https://nlp.stanford.edu/blog/the-stanford-nli-corpus-revisited/}{limited}. This limitation has 
-prompted the exploration of supplemental training to bridge these gaps.
+Modern LLMs perform exceedingly well across a broad range of language modeling tasks. Particularly massive, multi-hundred billion
+parameter models are approaching near superhuman language capabilities in some domains. However, smaller more practical models
+(like those which may realistically fit on a mobile device for example) still struggle with more complicated constructs of language
+like sarcasm and idioms. To emphasize this point, if an NLI model were to classify the hypothesis "the author loves research papers"
+given the title of this work as the premise, it would inaccurately label the example as supportive rather than a contradiction.
+In contrast, the subtleties of using the words "Man," and "just" are enough for most humans to accurately decipher the
+sarcastic tone.
 
+\subsection{The ELECTRA-SMALL Model}
+The ELECTRA-SMALL model was selected simply because it is a small, quickly trained model. Despite its small memory footprint,
+it is a robust model that outperforms many larger models. Furthermore, it was one of few models which were accessible to train
+given the authors' limited access to hardware accelerators.
+
+\subsection{Adversarial Examples}
+We drew inspiration for curating our tricky dataset from previous works exploring the concept of adversarial examples (cite). An
+adversarial example is one which is devised with the sole intent of causing the model to become confused or to navigate
+areas of its search space which cause instability in the model's outputs. Some works have shown that including adversarial
+examples in training data (as we have done via fine tuning) improve a models ability to be resilient to adversarial data.
+In our case, this improves the model's ability to generalize to more nuanced and complicated language patterns.
+
+\subsection{The SNLI Dataset}
+The Stanford Natural Language Inference (SNLI) dataset has been pivotal in training numerous NLP models, including ELECTRA-SMALL.
+While it provides a broad spectrum of linguistic examples, its coverage of intricate language patterns is \href{https://nlp.stanford.edu/blog/the-stanford-nli-corpus-revisited/}{limited}. This limitation prompted our exploration of supplemental training data to bridge these gaps.
 
 
 \section{Examples of Errors}
-\subsection{Informal Speech}
+\subsection{Grammatically Incorrect Dialect}
 \begin{itemize}
-\item Premise: He doesn’t hardly speak to anyone.
-\item Hypothesis: He is very outgoing.
-\item Gold label: 2
-\item Actual: 0
+	\item Premise: He doesn’t hardly speak to anyone.
+	\item Hypothesis: He is very outgoing.
+	\item Gold label: 2
+	\item Actual: 0
 \end{itemize}
 
 \subsection{Sarcasm}
 \begin{itemize}
-\item Premise: What a pleasant surprise, another bill in the mail.
-\item Hypothesis: I do not enjoy paying my bills.
-\item Gold label: 2
-\item Actual: 0
+	\item Premise: What a pleasant surprise, another bill in the mail.
+	\item Hypothesis: I do not enjoy paying my bills.
+	\item Gold label: 2
+	\item Actual: 0
 \end{itemize}
-  
+
 \subsection{Figures of Speech}
 \begin{itemize}
-\item Premise: Come on, spill the beans about the party plans!
-\item Hypothesis: Someone wants them to spill the beans about the party plans.
-\item Gold label: 0
-\item Actual: 1
+	\item Premise: Come on, spill the beans about the party plans!
+	\item Hypothesis: Someone wants them to spoil the party plans.
+	\item Gold label: 0
+	\item Actual: 1
 \end{itemize}
 
-\newpage
 \section{Discussion on Retraining the Model}
-The general class of mistakes that we tested fell into three categories. These categories consist of examples in which there exists a negation of sorts 
-(especially double negation), those which use sarcasm, and those that use figures of speech. The above categories are difficult for the model to interpret because
-they each have unorthodox or non-literal usages. These findings suggest that the model struggles the most with context-dependent and counter-intuitive examples. We 
-believe that provided more context, or with more sophisticated linguistic analysis, the model would perform significantly better. Figure 1 shows the different error
-rates for the three classes.
+The categories of mistakes that we tested were:  sarcasm, grammatically incorrect dialect, idiomatic speech. In the sarcasm
+category, the meaning is often the opposite of the literal text and is often signaled only by small nuances in the text.
+In the grammatically incorrect dialect category, the text often includes a double negation where the meaning is actually meant
+to be interpreted as a single negation. For example, in some parts of the southern United States the phrase
+"That ain't nothing to be scared of." simply means "That isn't something to fear." In the idiomatic speech category,
+the text simply contains some idiom or figure of speech which has a non-literal meaning. These categories are difficult
+for the model to interpret because each have unorthodox or non-literal usages. Our findings suggest that the model
+struggles most with context-dependent or counter-intuitive examples. We show that providing more context through fine tuning
+data allows the model to perform significantly better. Figure 1 shows the prediction error rates for the three categories of
+tricky examples.
 
 \begin{figure}[!h]
-  \centering
-  \includegraphics[width=0.5\textwidth]{images/error_rates.png}
-  \caption{error rates}
-  \label{fig:a}
+	\centering
+	\includegraphics[width=0.7\textwidth]{images/error_rates.png}
+	\caption{prediction error rates $\in [0, 100]$ for each category of tricky example}
 \end{figure}
 
-Using a confusion matrix, we can more deeply understand what kind of misclassifications the model is making. We can see from the data that the model has a very 
-difficult time classifying examples where the true label is 2, as compared to those with a true label of 0 or 1. This is expected, because many of our examples 
-are supposed to make the model think it is entailment, when really it is a contradiction. Figure 2 illustrates this below. Figure 3 shows the confusion 
-matrix for the SNLI dataset, which when evaluated on the checkpoint we chose, has an accuracy of 85.8\%. 
+Using a confusion matrix, we can more deeply understand what kind of misclassifications the model is making. We can see from the data that the model has a very
+difficult time classifying examples where the true label is contradiction (2), as compared to those with a true label of entailment (0) or neutral (1). This is expected, because many of our tricky examples
+are designed to seem like entailments, when in reality they are contradictions. Figures 2 and 3 shows the confusion
+matrices on our tricky dataset and the SNLI dataset for an untuned ELECTRA-SMALL model. When we evaluated the ELECTRA-SMALL
+model on the SNLI dataset it achieved an accuracy of 85.8\%.
 
 \begin{figure}[!h]
-  \centering
-  \begin{minipage}{0.46\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
-    \caption{tricky examples (pre-tuning)}
-    \label{fig:b}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.48\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
-    \caption{snli dataset (pre-tuning)}
-    \label{fig:c}
-  \end{minipage}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
+		\caption{SNLI dataset before fine tuningr. lighter regions are better. notice that a clear diagonal emerges.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
+		\caption{our tricky dataset before fine tuning. lighter regions are better.}
+	\end{minipage}
 \end{figure}
 
-As one can see, the model performs significantly worse on our “tricky examples” dataset than on the original SNLI training dataset. This is to be expected, and 
-now we will go about fixing it. 
-
-\section{The Fix is In}
-To fix our project, we ended up retraining the model with our hand-annotated examples. We used 60 different examples for each category (double negation, figure of 
-speech, and sarcasm) with each example containing three sentences. One sentence was entailment, one was neutral, and the last was a contradiction. This gave us a 
-total of 180 sentences in whole. After retraining the data on the SNLI dataset with our examples included, our model accuracy jumped to 75\% on the “tricky examples”, 
-up from 49\%. The respective confusion matrices are shown below in figures 4 (tuned model) and 5 (original model).
+\section{Tuning on Adversarial Examples}
+To increase the model's resilience against tricky examples, we fine tune the model on a training portion of our
+tricky example dataset. The dataset is comprised of 60 hypotheses for each of the three categories discussed earlier (sarcasm,
+grammatically incorrect dialect, and idiomatic speech). Each hypothesis is paired with three premises where one is an entailment,
+one is neutral, and one is a contradiction. This results in a total of 180 examples. These 180 are then split into a training
+portion and an evaluation portion. The train/eval split was roughly 70/30 resulting in 125 training examples and 55 evaluation
+examples. The seed used to randomly split examples was 123. After fine tuning the model on our examples, the accuracy
+achieved improved to 60.0\% on the “tricky examples”, up from 50.9\%. The confusion matrices for our tricky dataset before and
+after fine tuning are shown in Figures 4 and 5 respectively.
 
 \begin{figure}[!h]
-  \centering
-  \begin{minipage}{0.47\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_tuned_tricky.png}
-    \caption{tuned on tricky examples}
-    \label{fig:d}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.47\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
-    \caption{trained on tricky examples}
-    \label{fig:e}
-  \end{minipage}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
+		\caption{our tricky dataset before fine tuning. lighter regions are better. note this figure is identical to Figure 3.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_tuned_tricky.png}
+		\caption{our tricky dataset after fine tuning. lighter regions are better. note the emergence of a diagonal as in Figure 2.}
+	\end{minipage}
 \end{figure}
 
-When evaluating the same metrics on the SNLI dataset, however, we got very different results. We found that our accuracy on the SNLI dataset actually decreased to 
-84.6\% compared to 85.8\% originally. This drop in accuracy can be explained by something known as “catastrophic forgetting”, and is expected behavior since we 
-retrained the model with new examples that were significantly different from the original. Catastrophic forgetting is a byproduct of sequential learning, and occurs 
-when a model is trained for task A, and then retrained for task B. This will cause the model to be better at task B, but perform worse on task A. This is because the 
-weights, which were optimized for task A, get updated for task B, potentially losing the information relevant to task A. It should be noted, however, that the model 
-reduced misclassification in the neutral sentiment class, and did not change accuracy in the entailment category. The corresponding confusion matrices are shown below 
-in figures 5 and 6. 
+When re-evaluating the tuned model on the SNLI dataset, the model still achieved commensurate performance as the untuned model.
+Only a small decrease in accuracy from 85.8\% to 84.6\% was observed. This drop in accuracy is expected behavior since we fine
+tuned the model on examples that were significantly different from the original SNLI examples. The authors expect that
+given a larger curated dataset of tricky examples, the trends we observed would continue. The models ability to accurately
+pick up sarcasm, dialect, and idioms would continue to improve, while its ability to perform the original SNLI task would
+continue to degrade as the fine tuning dataset increases in size. At some point, the fine tuning dataset would become
+large enough as to induce catastrophic forgetting, where the model will begin to unlearn the patterns of the original
+dataset altogether and start to overfit to sarcastic, dialectic, and idiomatic speech. The confusion matrices for the
+untuned model and the tuned model on the original SNLI dataset are shown in Figures 6 and 7 respectively.
 
 \begin{figure}[!h]
-  \centering
-  \begin{minipage}{0.44\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
-    \caption{trained on snli dataset}
-    \label{fig:f}
-  \end{minipage}
-  \hfill
-  \begin{minipage}{0.44\textwidth}
-    \includegraphics[width=\linewidth]{images/confusion_tuned_snli.png}
-    \caption{SNLI tuned with tricky examples}
-    \label{fig:g}
-  \end{minipage}
+	\centering
+	\begin{minipage}{0.44\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
+		\caption{SNLI dataset before fine tuning. lighter regions are better. note that this is identical to Figure 2.}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.44\textwidth}
+		\includegraphics[width=\linewidth]{images/confusion_tuned_snli.png}
+		\caption{SNLI dataset after fine tuning. lighter regions are better.}
+	\end{minipage}
 \end{figure}
 
 \newpage
-Also notable in our findings are the accuracy, precision, recall, and f1 scores. Both models had a tight cluster of the aforementioned metrics, with each metric being 
-within 1\% of each other (figure 8). 
+We also report the accuracy, precision, recall, and f1 scores for each of our treatments. All treatments achieve tight
+clusters overall with each metric being within 1\% of each other. This suggests that fine tuning on the tricky examples
+improves the models general ability to correctly classify tricky examples, rather than only improving precision or recall
+alone. Figure 8 provides a table of these metrics.
 
 \begin{figure}[!h]
-  \centering
-  \includegraphics[width=\linewidth]{images/metrics_nlp_final_project.png}
-  \caption{metrics}
-  \label{fig:h}
+	\centering
+	\includegraphics[width=\linewidth]{images/metrics_nlp_final_project.png}
+	\caption{reported metrics for each model-dataset treatment.}
 \end{figure}
-
-As noted in figure 8, and supported by the confusion matrices, the model is relatively balanced. This is important to note because it shows that the changes in our performance 
-on comples language structes was not due to an inconsistent model, or inconsistent learning. 
 
 \section{Conclusion}
 
-To conclude, this paper introduces a method that effectively enhances the performance of NLP models in processing complex language structures, while  
-preserving their overall performance. We demonstrate that retraining the model with a thoughtfully selected set of hand-annotated examples, specifically designed to challenge 
-the model, can lead to significant improvements. However, it's crucial to use caution during the retraining process to prevent catastrophic forgetting. This involves a careful 
-consideration of the number and nature of examples used, ensuring they aid the model's learning without overwhelming the existing weights. This approach underscores 
-the potential of targeted retraining as a powerful tool in refining state-of-the-art models.
+This work strengthens existing evidence for methods that effectively enhance the performance of NLP models in processing
+complex language structures. Namely, we show the effectiveness of including adversarial examples in a fine tuning dataset
+on the NLI modeling task. We demonstrate that fine tuning a model with a thoughtfully selected set of hand-annotated examples
+specifically designed to challenge the model can lead to a more resilient, robust model. We also note that there is
+a trade-off point when fine tuning, and that it is critical to use caution to avoid catastrophic forgetting. Specifically
+consideration of the number and the nature of examples used is needed. This approach underscores the potential of targeted
+retraining as a powerful tool in refining state-of-the-art models.
 
 \end{document}
