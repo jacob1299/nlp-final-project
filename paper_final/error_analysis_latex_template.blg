@@ -3,44 +3,44 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: error_analysis_latex_template.aux
 The style file: plain.bst
 Database file #1: references.bib
-You've used 8 entries,
+You've used 9 entries,
             2118 wiz_defined-function locations,
-            531 strings with 6283 characters,
-and the built_in function-call counts, 4155 in all, are:
-= -- 321
-> -- 434
+            535 strings with 6450 characters,
+and the built_in function-call counts, 4450 in all, are:
+= -- 345
+> -- 457
 < -- 1
-+ -- 173
-- -- 163
-* -- 370
-:= -- 737
-add.period$ -- 18
-call.type$ -- 8
-change.case$ -- 104
++ -- 182
+- -- 171
+* -- 389
+:= -- 787
+add.period$ -- 20
+call.type$ -- 9
+change.case$ -- 111
 chr.to.int$ -- 0
-cite$ -- 8
-duplicate$ -- 72
-empty$ -- 195
-format.name$ -- 163
-if$ -- 788
+cite$ -- 9
+duplicate$ -- 79
+empty$ -- 217
+format.name$ -- 171
+if$ -- 848
 int.to.chr$ -- 0
-int.to.str$ -- 8
+int.to.str$ -- 9
 missing$ -- 1
-newline$ -- 36
-num.names$ -- 18
-pop$ -- 141
+newline$ -- 40
+num.names$ -- 20
+pop$ -- 153
 preamble$ -- 1
-purify$ -- 96
+purify$ -- 102
 quote$ -- 0
-skip$ -- 75
+skip$ -- 83
 stack$ -- 0
-substring$ -- 74
-swap$ -- 17
+substring$ -- 79
+swap$ -- 18
 text.length$ -- 1
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 32
+type$ -- 36
 warning$ -- 0
-while$ -- 20
-width$ -- 9
-write$ -- 71
+while$ -- 22
+width$ -- 10
+write$ -- 79

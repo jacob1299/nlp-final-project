@@ -1,14 +1,14 @@
 # Fdb version 4
-["bibtex error_analysis_latex_template"] 1701650404 "error_analysis_latex_template.aux" "error_analysis_latex_template.bbl" "error_analysis_latex_template" 1701650405 0
-  "./references.bib" 1701650402 3702 be8b918c6dcc46e745b234063fb4ec52 ""
+["bibtex error_analysis_latex_template"] 1701725645 "error_analysis_latex_template.aux" "error_analysis_latex_template.bbl" "error_analysis_latex_template" 1701727085 0
+  "./references.bib" 1701725625 4012 af72ac648d483925d02a79490387df86 ""
   "/usr/local/texlive/2023/texmf-dist/bibtex/bst/base/plain.bst" 1292289607 20613 bd3fbfa9f64872b81ac57a0dd2ed855f ""
-  "error_analysis_latex_template.aux" 1701650405 4451 0bb1cb3202f3446bd8290cb82e7b4ba8 "pdflatex"
+  "error_analysis_latex_template.aux" 1701727085 4517 9cd1eeb787a8b8a34cedc871868da249 "pdflatex"
   (generated)
   "error_analysis_latex_template.bbl"
   "error_analysis_latex_template.blg"
   (rewritten before read)
-["pdflatex"] 1701650404 "/Users/jacob.badolato/personal/nlp/nlp-final-project/paper_final/error_analysis_latex_template.tex" "error_analysis_latex_template.pdf" "error_analysis_latex_template" 1701650405 0
-  "/Users/jacob.badolato/personal/nlp/nlp-final-project/paper_final/error_analysis_latex_template.tex" 1701650401 14975 7b3d5574b7121b410132bd103486dfd9 ""
+["pdflatex"] 1701727084 "/Users/jacob.badolato/personal/nlp/nlp-final-project/paper_final/error_analysis_latex_template.tex" "error_analysis_latex_template.pdf" "error_analysis_latex_template" 1701727085 0
+  "/Users/jacob.badolato/personal/nlp/nlp-final-project/paper_final/error_analysis_latex_template.tex" 1701727083 14987 4499eb6df89102e0582208db3e66ddbb ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/base/8r.enc" 1165713224 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/local/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1136849721 2971 def0b6c1f0b107b3b936def894055589 ""
   "/usr/local/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -116,10 +116,10 @@
   "/usr/local/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1701393761 4623355 b8cad38412faebe1ce5b780a45db67bd ""
   "/usr/local/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt" 1701393655 7883462 61911e05eb26bc128301d13aac22c922 ""
   "/usr/local/texlive/2023/texmf.cnf" 1678822455 577 1b2b1af17af2508fb20dd85783af4050 ""
-  "error_analysis_latex_template.aux" 1701650405 4451 0bb1cb3202f3446bd8290cb82e7b4ba8 "pdflatex"
-  "error_analysis_latex_template.bbl" 1701650404 2384 576d6b03d641025df436f0af5c085052 "bibtex error_analysis_latex_template"
-  "error_analysis_latex_template.out" 1701650405 2044 84e86101c7e4ee5afbccc339a00e7019 "pdflatex"
-  "error_analysis_latex_template.tex" 1701650401 14975 7b3d5574b7121b410132bd103486dfd9 ""
+  "error_analysis_latex_template.aux" 1701727085 4517 9cd1eeb787a8b8a34cedc871868da249 "pdflatex"
+  "error_analysis_latex_template.bbl" 1701725645 2574 49bf30c8d1a4a21e702c90e046dd4a7d "bibtex error_analysis_latex_template"
+  "error_analysis_latex_template.out" 1701727085 2044 84e86101c7e4ee5afbccc339a00e7019 "pdflatex"
+  "error_analysis_latex_template.tex" 1701727083 14987 4499eb6df89102e0582208db3e66ddbb ""
   "figures/error_rates.png" 1701641165 51045 48f69c37ec2b28267577acd75cc64de5 ""
   "figures/nlp_final_project_metrics.png" 1701641543 46886 fc0420a5d8816385b10bf23c82852c48 ""
   "figures/snli_trained_confusion.png" 1701640372 24913 fd52e21d7dbeeb9062e038b2dfe1e111 ""

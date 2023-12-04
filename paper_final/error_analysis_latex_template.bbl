@@ -13,6 +13,10 @@ Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla
 Kevin Clark, Minh-Thang Luong, Quoc~V. Le, and Christopher~D. Manning.
 \newblock Electra: Pre-training text encoders as discriminators rather than generators, 2020.
 
+\bibitem{devlin2019bert}
+Jacob Devlin, Ming-Wei Chang, Kenton Lee, and Kristina Toutanova.
+\newblock Bert: Pre-training of deep bidirectional transformers for language understanding, 2019.
+
 \bibitem{gardner2020evaluating}
 Matt Gardner, Yoav Artzi, Victoria Basmova, Jonathan Berant, Ben Bogin, Sihao Chen, Pradeep Dasigi, Dheeru Dua, Yanai Elazar, Ananth Gottumukkala, Nitish Gupta, Hanna Hajishirzi, Gabriel Ilharco, Daniel Khashabi, Kevin Lin, Jiangming Liu, Nelson~F. Liu, Phoebe Mulcaire, Qiang Ning, Sameer Singh, Noah~A. Smith, Sanjay Subramanian, Reut Tsarfaty, Eric Wallace, Ally Zhang, and Ben Zhou.
 \newblock Evaluating models' local decision boundaries via contrast sets, 2020.

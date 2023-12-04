@@ -32,7 +32,7 @@
 \end{abstract}
 
 \section{Introduction}
-Models like GPT 3 \cite{brown2020language}, GPT 3.5 Turbo, and \cite{openai2023gpt4} GPT 4 have left the world speechless at the awe-inspiring
+Models like GPT 3 \cite{brown2020language}, BERT \cite{devlin2019bert}, and \cite{openai2023gpt4} GPT 4 have left the world speechless at the awe-inspiring
 capabilities of large language models (LLMs). In contrast, LLM failures like those in the early versions of Bing + ChatGPT
 have served as comedic inspiration for memes as well as the inspiration of nightmares for Microsoft stakeholders. This
 raises the question: given the strong results of LLMs in some domains, which problem classes cause LLMs to experience
@@ -134,7 +134,7 @@ tricky examples.
 
 Using a confusion matrix, we can more deeply understand what kind of misclassifications the model is making. We can see from the data that the model has a very
 difficult time classifying examples where the true label is contradiction (2), as compared to those with a true label of entailment (0) or neutral (1). This is expected, because many of our tricky examples
-are designed to seem like entailments, when in reality they are contradictions. Figures 2 and 3 shows the confusion
+are designed to seem like entailments, when in reality they are contradictions. Figures 2 and 3 show the confusion
 matrices on our tricky dataset and the SNLI dataset for an untuned ELECTRA-SMALL model. When we evaluated the ELECTRA-SMALL
 model on the SNLI dataset it achieved an accuracy of 85.8\%.
 
