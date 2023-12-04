@@ -1,0 +1,36 @@
+\begin{thebibliography}{1}
+
+\bibitem{bowman-etal-2015-large}
+Samuel~R. Bowman, Gabor Angeli, Christopher Potts, and Christopher~D. Manning.
+\newblock A large annotated corpus for learning natural language inference.
+\newblock In Llu{\'\i}s M{\`a}rquez, Chris Callison-Burch, and Jian Su, editors, {\em Proceedings of the 2015 Conference on Empirical Methods in Natural Language Processing}, pages 632--642, Lisbon, Portugal, September 2015. Association for Computational Linguistics.
+
+\bibitem{brown2020language}
+Tom~B. Brown, Benjamin Mann, Nick Ryder, Melanie Subbiah, Jared Kaplan, Prafulla Dhariwal, Arvind Neelakantan, Pranav Shyam, Girish Sastry, Amanda Askell, Sandhini Agarwal, Ariel Herbert-Voss, Gretchen Krueger, Tom Henighan, Rewon Child, Aditya Ramesh, Daniel~M. Ziegler, Jeffrey Wu, Clemens Winter, Christopher Hesse, Mark Chen, Eric Sigler, Mateusz Litwin, Scott Gray, Benjamin Chess, Jack Clark, Christopher Berner, Sam McCandlish, Alec Radford, Ilya Sutskever, and Dario Amodei.
+\newblock Language models are few-shot learners, 2020.
+
+\bibitem{clark2020electra}
+Kevin Clark, Minh-Thang Luong, Quoc~V. Le, and Christopher~D. Manning.
+\newblock Electra: Pre-training text encoders as discriminators rather than generators, 2020.
+
+\bibitem{gardner2020evaluating}
+Matt Gardner, Yoav Artzi, Victoria Basmova, Jonathan Berant, Ben Bogin, Sihao Chen, Pradeep Dasigi, Dheeru Dua, Yanai Elazar, Ananth Gottumukkala, Nitish Gupta, Hanna Hajishirzi, Gabriel Ilharco, Daniel Khashabi, Kevin Lin, Jiangming Liu, Nelson~F. Liu, Phoebe Mulcaire, Qiang Ning, Sameer Singh, Noah~A. Smith, Sanjay Subramanian, Reut Tsarfaty, Eric Wallace, Ally Zhang, and Ben Zhou.
+\newblock Evaluating models' local decision boundaries via contrast sets, 2020.
+
+\bibitem{glockner2018breaking}
+Max Glockner, Vered Shwartz, and Yoav Goldberg.
+\newblock Breaking nli systems with sentences that require simple lexical inferences, 2018.
+
+\bibitem{jia2017adversarial}
+Robin Jia and Percy Liang.
+\newblock Adversarial examples for evaluating reading comprehension systems, 2017.
+
+\bibitem{naveed2023comprehensive}
+Humza Naveed, Asad~Ullah Khan, Shi Qiu, Muhammad Saqib, Saeed Anwar, Muhammad Usman, Naveed Akhtar, Nick Barnes, and Ajmal Mian.
+\newblock A comprehensive overview of large language models, 2023.
+
+\bibitem{openai2023gpt4}
+OpenAI.
+\newblock Gpt-4 technical report, 2023.
+
+\end{thebibliography}

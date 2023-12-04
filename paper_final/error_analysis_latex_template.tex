@@ -16,11 +16,11 @@
 \author{%
   Jacob Badolato \\
   University of Texas at Austin \\
-  \texttt{email@example.com} \\
+  \texttt{jacobbadolato@utexas.edu} \\
   \And
   Andrew McGehee \\
   University of Texas at Austin \\
-  \texttt{email@example.com} \\
+  \texttt{andrewmcgehee@utexas.edu} \\
 }
 
 \begin{document}
@@ -28,11 +28,11 @@
 \maketitle
 
 \begin{abstract}
-	State of the art language models have been shown to perform well across a broad spectrum of language modeling tasks like natural language inference (NLI), question answering (QA), and next token generation tasks as seen in applications like ChatGPT (cite). However, it is still quite simple to find examples that confuse language models and cause significant degradation in performance metrics. In this work, we propose one such set of "tricky" examples. We analyze the performance of the ELECTRA-SMALL model (cite) on the NLI task (cite) across three subsets of tricky examples: sarcasm, grammatically incorrect dialect, and idiomatic speech. We show that the model struggles to accurately classify such examples. While the model achieves a strong 85.8\% accuracy on the Stanford NLI (SNLI) dataset (cite), it is only able to achieve 50.9\% accuracy on the holdout portion of our curated tricky dataset. We also show that simply fine tuning the model on a small training portion of these examples improves the models ability to accurately classify new tricky examples while incurring almost no additional loss on the original SNLI dataset. Hence, we provide some evidence that providing higher quality, more diverse examples of real, albeit complex language patterns in training data can improve a model's ability to generalize across tricky examples.
+	State of the art language models have been shown to perform well across a broad spectrum of language modeling tasks like natural language inference (NLI), question answering (QA), and next token generation tasks as seen in applications like ChatGPT \cite{naveed2023comprehensive}. However, it is still quite simple to find examples that confuse language models and cause significant degradation in performance metrics. In this work, we propose one such set of "tricky" examples. We analyze the performance of the ELECTRA-SMALL model \cite{clark2020electra} on the NLI task \cite{bowman-etal-2015-large} across three subsets of tricky examples: sarcasm, grammatically incorrect dialect, and idiomatic speech. We show that the model struggles to accurately classify such examples. While the model achieves a strong 85.8\% accuracy on the Stanford NLI (SNLI) dataset \cite{bowman-etal-2015-large}, it is only able to achieve 50.9\% accuracy on the holdout portion of our curated tricky dataset. We also show that simply fine tuning the model on a small training portion of these examples improves the models ability to accurately classify new tricky examples while incurring almost no additional loss on the original SNLI dataset. Hence, we provide some evidence that providing higher quality, more diverse examples of real, albeit complex language patterns in training data can improve a model's ability to generalize across tricky examples.
 \end{abstract}
 
 \section{Introduction}
-Models like GPT 3, GPT 3.5 Turbo, and GPT 4 (cite these three) have left the world speechless at the awe-inspiring
+Models like GPT 3 \cite{brown2020language}, GPT 3.5 Turbo, and \cite{openai2023gpt4} GPT 4 have left the world speechless at the awe-inspiring
 capabilities of large language models (LLMs). In contrast, LLM failures like those in the early versions of Bing + ChatGPT
 have served as comedic inspiration for memes as well as the inspiration of nightmares for Microsoft stakeholders. This
 raises the question: given the strong results of LLMs in some domains, which problem classes cause LLMs to experience
@@ -76,7 +76,7 @@ it is a robust model that outperforms many larger models. Furthermore, it was on
 given the authors' limited access to hardware accelerators.
 
 \subsection{Adversarial Examples}
-We drew inspiration for curating our tricky dataset from previous works exploring the concept of adversarial examples (cite). An
+We drew inspiration for curating our tricky dataset from previous works exploring the concept of adversarial examples \cite{gardner2020evaluating,glockner2018breaking,jia2017adversarial}. An
 adversarial example is one which is devised with the sole intent of causing the model to become confused or to navigate
 areas of its search space which cause instability in the model's outputs. Some works have shown that including adversarial
 examples in training data (as we have done via fine tuning) improve a models ability to be resilient to adversarial data.
@@ -84,7 +84,7 @@ In our case, this improves the model's ability to generalize to more nuanced and
 
 \subsection{The SNLI Dataset}
 The Stanford Natural Language Inference (SNLI) dataset has been pivotal in training numerous NLP models, including ELECTRA-SMALL.
-While it provides a broad spectrum of linguistic examples, its coverage of intricate language patterns is \href{https://nlp.stanford.edu/blog/the-stanford-nli-corpus-revisited/}{limited}. This limitation prompted our exploration of supplemental training data to bridge these gaps.
+While it provides a broad spectrum of linguistic examples, its coverage of intricate language patterns is limited \cite{bowman-etal-2015-large}. This limitation prompted our exploration of supplemental training data to bridge these gaps.
 
 
 \section{Examples of Errors}
@@ -95,6 +95,8 @@ While it provides a broad spectrum of linguistic examples, its coverage of intri
 	\item Gold label: 2
 	\item Actual: 0
 \end{itemize}
+
+\newpage
 
 \subsection{Sarcasm}
 \begin{itemize}
@@ -112,7 +114,7 @@ While it provides a broad spectrum of linguistic examples, its coverage of intri
 	\item Actual: 1
 \end{itemize}
 
-\section{Discussion on Retraining the Model}
+\section{Discussion on Tuning the Model}
 The categories of mistakes that we tested were:  sarcasm, grammatically incorrect dialect, idiomatic speech. In the sarcasm
 category, the meaning is often the opposite of the literal text and is often signaled only by small nuances in the text.
 In the grammatically incorrect dialect category, the text often includes a double negation where the meaning is actually meant
@@ -126,7 +128,7 @@ tricky examples.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=0.7\textwidth]{images/error_rates.png}
+	\includegraphics[width=0.7\textwidth]{figures/error_rates.png}
 	\caption{prediction error rates $\in [0, 100]$ for each category of tricky example}
 \end{figure}
 
@@ -139,12 +141,12 @@ model on the SNLI dataset it achieved an accuracy of 85.8\%.
 \begin{figure}[!h]
 	\centering
 	\begin{minipage}{0.45\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
-		\caption{SNLI dataset before fine tuningr. lighter regions are better. notice that a clear diagonal emerges.}
+		\includegraphics[width=\linewidth]{figures/snli_trained_confusion.png}
+		\caption{SNLI dataset before fine tuning. lighter regions are better. notice that a clear diagonal emerges.}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.45\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
+		\includegraphics[width=\linewidth]{figures/tricky_trained_confusion.png}
 		\caption{our tricky dataset before fine tuning. lighter regions are better.}
 	\end{minipage}
 \end{figure}
@@ -162,12 +164,12 @@ after fine tuning are shown in Figures 4 and 5 respectively.
 \begin{figure}[!h]
 	\centering
 	\begin{minipage}{0.45\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_trained_tricky.png}
+		\includegraphics[width=\linewidth]{figures/tricky_trained_confusion.png}
 		\caption{our tricky dataset before fine tuning. lighter regions are better. note this figure is identical to Figure 3.}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.45\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_tuned_tricky.png}
+		\includegraphics[width=\linewidth]{figures/tricky_tuned_confusion.png}
 		\caption{our tricky dataset after fine tuning. lighter regions are better. note the emergence of a diagonal as in Figure 2.}
 	\end{minipage}
 \end{figure}
@@ -185,12 +187,12 @@ untuned model and the tuned model on the original SNLI dataset are shown in Figu
 \begin{figure}[!h]
 	\centering
 	\begin{minipage}{0.44\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_trained_snli.png}
+		\includegraphics[width=\linewidth]{figures/snli_trained_confusion.png}
 		\caption{SNLI dataset before fine tuning. lighter regions are better. note that this is identical to Figure 2.}
 	\end{minipage}
 	\hfill
 	\begin{minipage}{0.44\textwidth}
-		\includegraphics[width=\linewidth]{images/confusion_tuned_snli.png}
+		\includegraphics[width=\linewidth]{figures/snli_tuned_confusion.png}
 		\caption{SNLI dataset after fine tuning. lighter regions are better.}
 	\end{minipage}
 \end{figure}
@@ -203,7 +205,7 @@ alone. Figure 8 provides a table of these metrics.
 
 \begin{figure}[!h]
 	\centering
-	\includegraphics[width=\linewidth]{images/metrics_nlp_final_project.png}
+	\includegraphics[width=\linewidth]{figures/nlp_final_project_metrics.png}
 	\caption{reported metrics for each model-dataset treatment.}
 \end{figure}
 
@@ -215,5 +217,9 @@ on the NLI modeling task. We demonstrate that fine tuning a model with a thought
 specifically designed to challenge the model can lead to a more resilient, robust model. We also note that there is
 a trade-off point when fine tuning, and that it is critical to use caution to avoid catastrophic forgetting. Specifically
 consideration of the number and the nature of examples used is needed. This approach underscores the potential of targeted
-retraining as a powerful tool in refining state-of-the-art models.
+tuning as a powerful tool in refining state-of-the-art models.
+
+\bibliographystyle{plain}
+\bibliography{references}
+
 \end{document}
